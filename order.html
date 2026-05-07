@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="order.css">
+</head>
+
+<body>
+
+  <div class="order-box">
+
+    <h1>Ajwa Bakery</h1>
+    <p>Place Your Cake Order</p>
+
+    <form id="bakeryForm">
+
+      <input type="text" id="name" placeholder="Customer Name" required>
+
+      <input type="tel" id="phone" placeholder="Phone Number" required>
+      <textarea id="text" placeholder="Delivery Address"></textarea>
+
+      <select id="cake" required>
+        <option value="">Select (Cake,Dates,Nuts)</option>
+        <option>Choco truffle Cake</option>
+        <option> Cake</option>
+        <option>Black Forest Cake</option>
+        <option>Red Velvet Cake</option>
+        <option>White Forest Cake</option>
+        <option>Bkue berry Cake</option>
+        <option>straw berry Cake</option>
+        <option>mango Cake</option>
+        <option>Pine apple Cake</option>
+        <option>Nutty BubbleCake</option>
+        <option>Vanjo Cake</option>
+        <option>Caramel  Cake</option>
+        <option>Cashewnut Normal</option>
+        <option>Cashewnut salted</option>
+        <option>Cashewnut Roasted</option>
+        <option>Cashewnut pepper</option>
+        <option>Pistachio</option>
+        <option>Almond</option>
+        <option>Dry Grapes</option>
+        <option>Dry Kiwi</option>
+        <option>Chia seeds</option>
+        <option>Mashrook Dates</option>
+        <option>Barari Dates</option>
+        <option>Irani Dates</option>
+        <option>Zuhari Dates</option>
+        <option>Mariyam Dates</option>
+        <option>Sukkari Dates</option>
+        <option>Algeria Dates</option>
+        <option>Safawi Dates</option>
+        <option>Chicken Roll</option>
+        <option>Chicken Puff</option>
+        <option>Vegetable Puff</option>
+        <option>Egg Puff</option>
+        <option>Cutlet</option>
+        <option>Banana Puff</option>
+        <option>Black Halwa</option>
+        <option>Orange Halwa</option>
+        <option>Nuts Halwa</option>
+        <option>Green Halwa</option>
+        <option>Engagement Hampers</option>
+        <option>Chocolates</option>
+
+
+
+
+        
+
+      </select>
+
+      <input type="number" id="kg" placeholder="Cake Weight (KG)" required>
+
+      <input type="date" id="date" required>
+
+      <textarea id="message" placeholder="Custom Message on Cake"></textarea>
+
+      <button type="submit">Order on WhatsApp</button>
+
+    </form>
+
+  </div>
+
+<script>
+
+document.getElementById("bakeryForm").addEventListener("submit", function(e){
+
+    e.preventDefault();
+
+    let name = document.getElementById("name").value;
+    let phone = document.getElementById("phone").value;
+    let address = document.getElementById("message").value;
+    let cake = document.getElementById("cake").value;
+    let kg = document.getElementById("kg").value;
+    let date = document.getElementById("date").value;
+    let message = document.getElementById("message").value;
+
+    let whatsappMessage =
+`🍰 *NEW CAKE ORDER* 🍰
+
+👤 Name: ${name}
+📞 Phone: ${phone}
+📍 Address: ${text}
+🎂 Cake: ${cake}
+⚖ Weight: ${kg} KG
+📅 Delivery Date: ${date}
+
+📝 Cake Message:
+${message}`;
+
+    let number = "919995553094";
+
+    let url = `https://wa.me/${number}?text=${encodeURIComponent(whatsappMessage)}`;
+
+    window.open(url, "_blank");
+
+});
+
+</script>
+</body>
+</html>

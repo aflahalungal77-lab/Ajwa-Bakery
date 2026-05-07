@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Ajwa Bakers</title>
+  <link rel="icon" href="ajw.png" type="image/gif" sizes="16x16">
+
+  <!-- Bootstrap CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+   <!-- Google Font -->
+    <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+     *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Poppins',sans-serif;
+    }
+
+    body{
+      background:#fffaf7;
+      overflow-x:hidden;
+    }
+
+    .hero{
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      position:relative;
+      overflow:hidden;
+      background:linear-gradient(to right,#fff5f1,#fffdfc);
+    }
+
+    .hero-text h1{
+      font-size:60px;
+      font-weight:700;
+      color:#3a1f1f;
+      line-height:1.2;
+    }
+
+    .hero-text span{
+      color:#c46a1b;
+    }
+
+    .hero-text p{
+      font-size:18px;
+      color:#6a4c4c;
+      margin-top:20px;
+      margin-bottom:30px;
+    }
+
+    .btn-order{
+      background:#c46a1b;
+      color:white;
+      padding:14px 34px;
+      border-radius:50px;
+      text-decoration:none;
+      font-weight:600;
+      transition:.3s;
+      display:inline-block;
+    }
+
+    .btn-order:hover{
+      background:#a85715;
+      transform:translateY(-3px);
+    }
+
+    /* Slider Image */
+
+    .image-box{
+      position:relative;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+    }
+
+    .food-image{
+      width:100%;
+      max-width:500px;
+      border-radius:30px;
+      animation:float 4s ease-in-out infinite;
+      box-shadow:0 20px 40px rgba(0,0,0,0.15);
+      transition:0.5s;
+    }
+
+    @keyframes float{
+      0%{
+        transform:translateY(0px);
+      }
+
+      50%{
+        transform:translateY(-18px);
+      }
+
+      100%{
+        transform:translateY(0px);
+      }
+    }
+
+    /* Background circles */
+
+    .circle{
+      position:absolute;
+      border-radius:50%;
+      background:rgba(196,106,27,0.08);
+      animation:pulse 5s infinite;
+    }
+
+    .circle1{
+      width:300px;
+      height:300px;
+      top:-50px;
+      right:-50px;
+    }
+
+    .circle2{
+      width:180px;
+      height:180px;
+      bottom:-30px;
+      left:-30px;
+    }
+
+    @keyframes pulse{
+      0%{
+        transform:scale(1);
+      }
+
+      50%{
+        transform:scale(1.1);
+      }
+
+      100%{
+        transform:scale(1);
+      }
+    }
+
+    @media(max-width:768px){
+
+      .hero{
+        text-align:center;
+        padding:60px 0;
+      }
+
+      .hero-text h1{
+        font-size:38px;
+      }
+
+      .hero-text p{
+        font-size:16px;
+      }
+
+      .food-image{
+        max-width:320px;
+        margin-top:40px;
+      }
+
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="#" >Ajwa Bakers</a>
+
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="menu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Menu</a></li>
+        <li class="nav-item"><a class="nav-link" href="order.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero">
+
+  <div class="circle circle1"></div>
+  <div class="circle circle2"></div>
+
+  <div class="container">
+    <h1 class="text-center" style="margin-top: -134px;">Nuts,Dry Fruits and Chocolates</h1>
+    <div class="row align-items-center">
+
+      <!-- LEFT -->
+      <div class="col-lg-6 hero-text">
+
+        <h1>
+          Fresh & Delicious <br>
+          <span id="titleChange">Cakes</span>
+        </h1>
+
+        <p>
+          Premium quality sweets, snacks and bakery products
+          crafted with love for every special moment.
+        </p>
+
+        <a href="#nuts" class="btn-order">
+          See Collections
+        </a>
+
+      </div>
+
+      <!-- RIGHT -->
+      <div class="col-lg-6">
+
+        <div class="image-box">
+
+          <img
+            id="sliderImage"
+            class="food-image"
+            src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?q=80&w=1200&auto=format&fit=crop"
+            alt="Food"
+          >
+
+        </div>
+
+      </div>
+       <div class="container" >
+    
+    <div class="text-dark mt-10" style="margin-bottom: 48px">
+      <a href="index.html"> <button class="btn " style="margin-right: 20px; margin-left: 6px; background: #c46a1b; color: #fff; padding: -20px 34px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: .3s;
+  display: inline-block;">Cakes</button></a>
+      <a href="dates.html"><button class="btn " style="margin-right: 20px; background: #c46a1b; color: #fff;padding: -20px 34px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: .3s;
+  display: inline-block;">Dates</button></a>
+      <a href="nuts.html"><button class="btn " style="margin-right: 20px; background: #c46a1b; color: #fff; padding: -20px 34px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: .3s;
+  display: inline-block;">Nuts</button></a>
+     <a href="nuts.html"><button class="btn " style="margin-right: 20px; background: #c46a1b; color: #fff; padding: -20px 34px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: .3s;
+  display: inline-block;
+  
+  margin-top: 10px;">Engagement Hampering</button></a> 
+      
+    </div>
+  </div>
+
+    </div>
+  </div>
+
+</section>
+
+
+<div class="text-dark mt-10" style="margin-bottom: 48px">
+      <a href="#nuts"> <button class="btn " style="margin-right: 20px; margin-left: 139px; background:black; color: #fff; padding: -20px 34px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: .3s;
+  display: inline-block;">Nuts</button></a>
+      <a href="#chocolates"><button class="btn " style="margin-right: 20px; background: black; color: #fff;padding: -20px 34px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: .3s;
+  display: inline-block;">Chocolates</button></a>
+</div>
+
+<h1 class="text-center" style="margin-top: -27px;">Nuts & Dry Fruits and Chocolates</h1>
+
+<!-- Products -->
+<section class="container my-5 m-10 " id="nuts">
+  
+
+  <div class="row" style="margin-top:200px;">
+
+    
+
+    <div class="col-12 col-md-4 mb-4">
+      <div class="card">
+        <img src="drygrapes.png" class="card-img-top">
+        <div class="card-body text-center">
+          <h5>Dry grapes</h5>
+          
+          <a href="order.html"> <button class="btn btn-warning">Order Now</button></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-4 mb-4">
+      <div class="card">
+        <img src="cashewpepper.png" class="card-img-top">
+        <div class="card-body text-center">
+          <h5>Cashewnut pepper </h5>
+          
+          <a href="order.html"> <button class="btn btn-warning">Order Now</button></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-4 mb-4">
+      <div class="card">
+        <img src="cashew nor.png" class="card-img-top">
+        <div class="card-body text-center">
+          <h5>cashewnut Salted</h5>
+          
+         <a href="order.html"> <button class="btn btn-warning">Order Now</button></a>
+        </div>
+      </div>
+    </div>
+
+    
+
+    <div class="col-12 col-md-4 mb-4">
+      <div class="card" >
+        <img src="cashewrost.png" class="card-img-top">
+        <div class="card-body text-center">
+          <h5> Cashewnut rosted</h5>
+          
+           <a href="order.html"> <button class="btn btn-warning">Order Now</button></a>>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="col-12 col-md-4 mb-4">
+      <div class="card">
+        <img src="pista.png" class="card-img-top">
+        <div class="card-body text-center">
+          <h5>pistachio</h5>
+          
+          <a href="order.html"> <button class="btn btn-warning">Order Now</button></a>
+        </div>
+      </div>
+    </div>
+     
+
+   
+
+     <div class="col-12 col-md-4 mb-4">
+      <div class="card">
+        <img src="almond.png" class="card-img-top" style="height: 442px">
+        <div class="card-body text-center">
+          <h5>Almond </h5>
+          
+          <a href="order.html"> <button class="btn btn-warning">Order Now</button></a>
+        </div>
+      </div>
+    </div>
+
+     
+
+    <div class="col-12 col-md-4 mb-4">
+      <div class="card">
+        <img src="kiwi.png" class="card-img-top">
+        <div class="card-body text-center">
+          <h5>Kiwi</h5>
+         <a href="order.html"> <button class="btn btn-warning">Order Now</button></a>
+        </div>
+      </div>
+    </div>
+
+     <div class="col-12 col-md-4 mb-4">
+      <div class="card">
+        <img src="cashew normal.png" class="card-img-top" style="height: 442px">
+        <div class="card-body text-center">
+          <h5>Cashewnut Normal</h5>
+          
+         <a href="order.html"> <button class="btn btn-warning">Order Now</button></a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col-12 col-md-4 mb-4">
+      <div class="card">
+        <img src="chiaseeds.png" class="card-img-top" style="height: 442px">
+        <div class="card-body text-center">
+          <h5>Chia seeds</h5>
+          
+          <a href="order.html"> <button class="btn btn-warning">Order Now</button></a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="container my-5 m-10 " id="chocolates">
+  
+
+  <div class="row" style="margin-top:200px;">
+
+    
+
+   
+
+    <div class="col-12 col-md-4 mb-4">
+      <div class="card">
+        <img src="suger.png" class="card-img-top">
+        <div class="card-body text-center">
+          <h5>Amul Suger Free</h5>
+          
+         <a href="order.html"> <button class="btn btn-warning">Order Now</button></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-4 mb-4">
+      <div class="card">
+        <img src="tiffani.png" class="card-img-top">
+        <div class="card-body text-center">
+          <h5>Tiffany Eclairs</h5>
+          
+         <a href="order.html"> <button class="btn btn-warning">Order Now</button></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-4 mb-4">
+      <div class="card">
+        <img src="fidji.png" class="card-img-top">
+        <div class="card-body text-center">
+          <h5>Fidji </h5>
+          
+         <a href="order.html"> <button class="btn btn-warning">Order Now</button></a>
+        </div>
+      </div>
+    </div>
+
+
+    
+
+    <div class="col-12 col-md-4 mb-4">
+      <div class="card" >
+        <img src="amul.png" class="card-img-top">
+        <div class="card-body text-center">
+          <h5> Dark Chocolate</h5>
+          
+           <a href="order.html"> <button class="btn btn-warning">Order Now</button></a>>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-4 mb-4">
+      <div class="card" >
+        <img src="twix.png" class="card-img-top">
+        <div class="card-body text-center">
+          <h5> Twix</h5>
+          
+           <a href="order.html"> <button class="btn btn-warning">Order Now</button></a>>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="col-12 col-md-4 mb-4">
+      <div class="card">
+        <img src="kunafa.png" class="card-img-top">
+        <div class="card-body text-center">
+          <h5>Kunafa & Pistachio Chocolate</h5>
+          
+          <a href="order.html"> <button class="btn btn-warning">Order Now</button></a>
+        </div>
+      </div>
+    </div>
+     
+
+   
+
+     <div class="col-12 col-md-4 mb-4">
+      <div class="card">
+        <img src="oreo.png" class="card-img-top" style="height: 442px">
+        <div class="card-body text-center">
+          <h5>Dairy Milk Oreo </h5>
+          
+          <a href="order.html"> <button class="btn btn-warning">Order Now</button></a>
+        </div>
+      </div>
+    </div>
+
+     
+
+    <div class="col-12 col-md-4 mb-4">
+      <div class="card">
+        <img src="ferrero.png" class="card-img-top">
+        <div class="card-body text-center">
+          <h5>Ferrero Rocher</h5>
+         <a href="order.html"> <button class="btn btn-warning">Order Now</button></a>
+        </div>
+      </div>
+    </div>
+
+     <div class="col-12 col-md-4 mb-4">
+      <div class="card">
+        <img src="kinderbueno.png" class="card-img-top" style="height: 442px">
+        <div class="card-body text-center">
+          <h5>Kinder Bueno chocolate</h5>
+          
+         <a href="order.html"> <button class="btn btn-warning">Order Now</button></a>
+        </div>
+      </div>
+    </div>
+    </div>
+</section>
+
+<!-- Contact -->
+<section class="bg-dark text-white p-5 text-center">
+  <h3>Contact Us</h3>
+  <p>Phone: 9995553094</p>
+</section>
+
+<script>
+
+  const items = [
+
+    {
+      title:"Cakes",
+      image:"https://images.unsplash.com/photo-1578985545062-69928b1d9587?q=80&w=1200&auto=format&fit=crop"
+    },
+
+    {
+      title:"Dates",
+      image:"data:image/jpeg;base64,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"
+    },
+
+    {
+      title:"Nuts",
+      image:"https://cdn.shopify.com/s/files/1/0144/6674/4377/files/TYPES_OF_NUTS_AND_SEEDS_AND_THEIR_HEALTH_BENEFITS_grande.jpeg?v=1555803575"
+    },  
+
+    {
+      title:"Dry Fruits",
+      image:"https://www.bluemacawflora.com/wp-content/uploads/2017/07/dried-fruit.jpg"
+    },
+
+    {
+      title:"Halwa",
+      image:"https://m.media-amazon.com/images/I/61Tc6feVMVL._AC_UF894,1000_QL80_.jpg"
+    },
+
+    {
+      title:"Snacks",
+      image:"https://www.sharmispassions.com/wp-content/uploads/2025/11/egg-puffs4.jpg"
+    }
+
+  ];
+
+  let index = 0;
+
+  const image = document.getElementById("sliderImage");
+  const title = document.getElementById("titleChange");
+
+  setInterval(() => {
+
+    index++;
+
+    if(index >= items.length){
+      index = 0;
+    }
+
+    image.style.opacity = 0;
+
+    setTimeout(() => {
+
+      image.src = items[index].image;
+      title.innerText = items[index].title;
+
+      image.style.opacity = 1;
+
+    }, 300);
+
+  }, 3000);
+
+</script>
+
+
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
